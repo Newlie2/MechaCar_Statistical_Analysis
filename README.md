@@ -1,6 +1,6 @@
 # MechaCar_Statistical_Analysis
 
-Part 1: Linear Regression to Predict MPG
+## Part 1: Linear Regression to Predict MPG
 
 lm_model <- lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data = MechaCar_mpg)
 > summary(lm_model)
@@ -28,9 +28,11 @@ Residual standard error: 8.774 on 44 degrees of freedom
 Multiple R-squared:  0.7149,	Adjusted R-squared:  0.6825 
 F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
-image.png
+The linear regression analysis identifies which variables in the dataset predict the mpg (miles per gallon) of MechaCar prototypes. The summary of the linear regression model provides valuable insights into the relationship between the variables and the mpg values.
+![image](https://github.com/Newlie2/MechaCar_Statistical_Analysis/assets/115044466/42cf35ac-b382-4642-9c2a-2d799912063c)
 
-Part 2: Create Visualizations for the Trip Analysis
+
+## Part 2: Create Visualizations for the Trip Analysis
 
 total_summary
 # A tibble: 1 × 4
@@ -45,9 +47,11 @@ total_summary
 1 Lot1                 1500       1500    0.980  0.990
 2 Lot2                 1500.      1500    7.47   2.73 
 3 Lot3                 1496.      1498. 170.    13.0
+	  
+The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch (PSI).
+By examining the total_summary dataframe, we can determine whether the current manufacturing data will satisfy the design specifications.
 
-
-Part 3: T-Tests on Suspension Coils
+## Part 3: T-Tests on Suspension Coils
 
  t_test_all_lots
 
@@ -61,9 +65,18 @@ alternative hypothesis: true mean is not equal to 1500
 sample estimates:
 mean of x 
   1498.78 
+![image](https://github.com/Newlie2/MechaCar_Statistical_Analysis/assets/115044466/a4f5347e-16c5-458e-ae7e-96b0d239ceb2)
+	  
+![image](https://github.com/Newlie2/MechaCar_Statistical_Analysis/assets/115044466/1f34b7f3-9801-4252-8e4a-a4e82051e1bd)
 
-  image.png
-  image.png
-  image.png
+![image](https://github.com/Newlie2/MechaCar_Statistical_Analysis/assets/115044466/5de0ba74-2c0e-437d-ae00-b0fd0b0e9ea1)
 
-  Part 4: Design a Study Comparing the MechaCar to the Competition
+The t-tests on the suspension coils was used to determine if the PSI (pounds per square inch) values for all manufacturing lots and each lot individually are statistically different from the population mean of 1,500 pounds per square inch.
+	  
+## Part 4: Design a Study Comparing the MechaCar to the Competition
+To compare the performance of MechaCar vehicles against vehicles from other manufacturers, we will design a statistical study that focuses on the metric of fuel efficiency.
+With the statistical test, we will need the following data:
+Highway fuel efficiency (MPG) data for a sample of MechaCar vehicles.
+Highway fuel efficiency (MPG) data for a sample of vehicles from other manufacturers.
+This study will provide valuable insights into the performance of MechaCar vehicles in terms of fuel efficiency and help consumers make informed decisions when considering their vehicle choices.
+In coclusion, by analyzing the data using a two-sample t-test, we can determine if MechaCar vehicles have a significantly different average highway fuel efficiency compared to their competition. 
